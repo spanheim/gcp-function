@@ -5,6 +5,10 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args: ['echo', 'Building...']
   id: BUILD
+  options:
+  logging: CLOUD_LOGGING_ONLY
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  serviceAccount: 'projects/management-450113/serviceAccounts/184496960694@cloudbuild.gserviceaccount.com'
   
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args: ['echo', 'Testing...']
